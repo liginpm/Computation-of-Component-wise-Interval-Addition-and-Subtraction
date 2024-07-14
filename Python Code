@@ -1,0 +1,39 @@
+from sympy import symbols
+# A = [[alpha1, beta1], [gamma1, delta1], [zeta1, eta1]]
+# B = [[alpha2, beta2], [gamma2, delta2], [zeta2, eta2]]
+# Definition of Symbolic Variable
+beta = symbols('beta')
+
+# Definition of Functions
+def compute_A_plus_B(alpha1, beta1, gamma1, delta1, zeta1, eta1, alpha2, beta2, gamma2, delta2, zeta2, eta2):
+    AB1 = [alpha1 + alpha2, beta1 + beta2]
+    AB2 = [gamma1 + gamma2, delta1 + delta2]
+    AB3 = [zeta1 + zeta2, eta1 + eta2]
+    return AB1, AB2, AB3
+
+def compute_A_minus_B(alpha1, beta1, gamma1, delta1, zeta1, eta1, alpha2, beta2, gamma2, delta2, zeta2, eta2):
+    AB1 = [alpha1 - eta2, beta1 - zeta2]
+    AB2 = [gamma1 - delta2, delta1 - gamma2]
+    AB3 = [zeta1 - beta2, eta1 - alpha2]
+    return AB1, AB2, AB3
+
+# Replace input values here for computation
+alpha1 = 22 + 0 * beta
+beta1 = 36.2857 - 14.2857 * beta
+gamma1 = 17.7143 + 14.2857 * beta
+delta1 = 40.5714 - 8.5714 * beta
+zeta1 = 25.7143 + 14.2857 * beta
+eta1 = 40 + 0 * beta
+alpha2 = 45 + 0 * beta
+beta2 = 76.4286 - 31.4286 * beta
+gamma2 = 41.1429 + 22.8571 * beta
+delta2 = 86.8571 - 22.8571 * beta
+zeta2 = 51.5714 + 31.4286 * beta
+eta2 = 83 + 0 * beta
+
+# Compute A+B and A-B
+A_plus_B = compute_A_plus_B(alpha1, beta1, gamma1, delta1, zeta1, eta1, alpha2, beta2, gamma2, delta2, zeta2, eta2)
+A_minus_B = compute_A_minus_B(alpha1, beta1, gamma1, delta1, zeta1, eta1, alpha2, beta2, gamma2, delta2, zeta2, eta2)
+
+print("A+B =", A_plus_B)
+print("A-B =", A_minus_B)
