@@ -2,7 +2,7 @@ from sympy import symbols
 # A = [[alpha1, beta1], [gamma1, delta1], [zeta1, eta1]]
 # B = [[alpha2, beta2], [gamma2, delta2], [zeta2, eta2]]
 # Definition of Symbolic Variable
-beta = symbols('beta')
+alpha, beta, gamma, delta = symbols('alpha beta gamma delta')
 
 # Definition of Functions
 def compute_A_plus_B(alpha1, beta1, gamma1, delta1, zeta1, eta1, alpha2, beta2, gamma2, delta2, zeta2, eta2):
